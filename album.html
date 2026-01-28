@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相册详情 - Leo 摄影工作室</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Leo Photography</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="gallery.html">作品集</a></li>
+                <li><a href="index.html#about">关于我</a></li>
+                <li><a href="admin.html" class="admin-link">管理</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Album Header -->
+        <section class="album-header">
+            <div class="container">
+                <a href="gallery.html" class="back-link">&larr; 返回作品集</a>
+                <h1 class="album-title" id="album-title">加载中...</h1>
+                <p class="album-description" id="album-description"></p>
+                <div class="album-meta" id="album-meta"></div>
+            </div>
+        </section>
+
+        <!-- Photos Grid -->
+        <section class="photos-section">
+            <div class="container">
+                <div class="photos-grid" id="photos-grid">
+                    <!-- Photos will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <button class="lightbox-prev">&larr;</button>
+            <button class="lightbox-next">&rarr;</button>
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Leo Photography. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/album.js"></script>
+</body>
+</html>

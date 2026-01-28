@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - Leo 摄影工作室</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Leo Photography</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="gallery.html" class="active">作品集</a></li>
+                <li><a href="index.html#about">关于我</a></li>
+                <li><a href="admin.html" class="admin-link">管理</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-header">
+            <div class="container">
+                <h1 class="page-title">作品集</h1>
+                <p class="page-subtitle">浏览所有摄影作品</p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="abu-dhabi">阿布扎比</button>
+                    <button class="filter-btn" data-filter="guangzhou">广州</button>
+                </div>
+
+                <div class="tags-filter" id="tags-filter">
+                    <!-- Tags will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Albums Grid -->
+        <section class="albums-section">
+            <div class="container">
+                <div class="album-grid" id="albums-grid">
+                    <!-- Albums will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Leo Photography. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>

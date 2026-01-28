@@ -1,0 +1,153 @@
+{
+  "photographer": {
+    "name": "Leo",
+    "title": "摄影师",
+    "bio": "专注于人像摄影与城市风光记录",
+    "contact": {
+      "email": "contact@example.com",
+      "wechat": "your_wechat_id"
+    }
+  },
+  "categories": [
+    {
+      "id": "abu-dhabi",
+      "name": "阿布扎比",
+      "description": "阿布扎比城市风光与地标建筑",
+      "type": "location"
+    },
+    {
+      "id": "guangzhou",
+      "name": "广州",
+      "description": "广州人像摄影作品",
+      "type": "location"
+    }
+  ],
+  "albums": [
+    {
+      "id": "louvre-abu-dhabi",
+      "title": "阿布扎比卢浮宫",
+      "description": "卢浮宫博物馆的建筑与光影",
+      "category": "abu-dhabi",
+      "tags": ["建筑", "风光", "艺术"],
+      "coverImage": "images/abu-dhabi/louvre/cover.jpg",
+      "date": "2024-01",
+      "location": "阿布扎比卢浮宫",
+      "photos": [
+        {
+          "id": "louvre-001",
+          "src": "images/abu-dhabi/louvre/photo1.jpg",
+          "title": "光影穹顶",
+          "description": "标志性的圆顶建筑"
+        }
+      ]
+    },
+    {
+      "id": "grand-mosque",
+      "title": "大清真寺",
+      "description": "谢赫扎耶德大清真寺的宏伟建筑",
+      "category": "abu-dhabi",
+      "tags": ["建筑", "宗教", "风光"],
+      "coverImage": "images/abu-dhabi/grand-mosque/cover.jpg",
+      "date": "2024-01",
+      "location": "谢赫扎耶德大清真寺",
+      "photos": [
+        {
+          "id": "mosque-001",
+          "src": "images/abu-dhabi/grand-mosque/photo1.jpg",
+          "title": "白色宫殿",
+          "description": "清真寺的纯白外观"
+        }
+      ]
+    },
+    {
+      "id": "emirates-palace",
+      "title": "皇宫酒店",
+      "description": "奢华的阿联酋皇宫酒店",
+      "category": "abu-dhabi",
+      "tags": ["建筑", "奢华", "风光"],
+      "coverImage": "images/abu-dhabi/emirates-palace/cover.jpg",
+      "date": "2024-01",
+      "location": "阿联酋皇宫酒店",
+      "photos": [
+        {
+          "id": "palace-001",
+          "src": "images/abu-dhabi/emirates-palace/photo1.jpg",
+          "title": "金色宫殿",
+          "description": "酒店的奢华外观"
+        }
+      ]
+    },
+    {
+      "id": "guangzhou-male",
+      "title": "男生写真",
+      "description": "广州男生人像摄影作品",
+      "category": "guangzhou",
+      "tags": ["男生", "人像", "写真"],
+      "coverImage": "images/guangzhou/male/cover.jpg",
+      "date": "2024-02",
+      "location": "广州",
+      "photos": [
+        {
+          "id": "male-001",
+          "src": "images/guangzhou/male/photo1.jpg",
+          "title": "城市男孩",
+          "description": "现代都市男生写真"
+        }
+      ]
+    },
+    {
+      "id": "guangzhou-female",
+      "title": "女生写真",
+      "description": "广州女生人像摄影作品",
+      "category": "guangzhou",
+      "tags": ["女生", "人像", "写真"],
+      "coverImage": "images/guangzhou/female/cover.jpg",
+      "date": "2024-02",
+      "location": "广州",
+      "photos": [
+        {
+          "id": "female-001",
+          "src": "images/guangzhou/female/photo1.jpg",
+          "title": "都市女孩",
+          "description": "时尚女生人像"
+        }
+      ]
+    },
+    {
+      "id": "guangzhou-street",
+      "title": "街拍作品",
+      "description": "广州街头摄影",
+      "category": "guangzhou",
+      "tags": ["街拍", "纪实", "城市"],
+      "coverImage": "images/guangzhou/street/cover.jpg",
+      "date": "2024-02",
+      "location": "广州",
+      "photos": [
+        {
+          "id": "street-001",
+          "src": "images/guangzhou/street/photo1.jpg",
+          "title": "街头瞬间",
+          "description": "捕捉城市生活"
+        }
+      ]
+    },
+    {
+      "id": "guangzhou-couple",
+      "title": "情侣摄影",
+      "description": "广州情侣人像作品",
+      "category": "guangzhou",
+      "tags": ["情侣", "人像", "浪漫"],
+      "coverImage": "images/guangzhou/couple/cover.jpg",
+      "date": "2024-02",
+      "location": "广州",
+      "photos": [
+        {
+          "id": "couple-001",
+          "src": "images/guangzhou/couple/photo1.jpg",
+          "title": "浪漫时刻",
+          "description": "情侣甜蜜瞬间"
+        }
+      ]
+    }
+  ]
+}
