@@ -129,7 +129,22 @@
       "date": "2024-01",
       "location": "亚伯拉罕之家",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "abrahamic-001",
+          "src": "images/abu-dhabi/abrahamic-house/photo1.jpg",
+          "type": "image",
+          "title": "和谐之家",
+          "description": "象征宗教和谐的建筑群"
+        },
+        {
+          "id": "abrahamic-002",
+          "src": "images/abu-dhabi/abrahamic-house/photo2.jpg",
+          "type": "image",
+          "title": "神圣空间",
+          "description": "包容不同信仰的圣地"
+        }
+      ]
     },
     {
       "id": "abu-dhabi-beach",
@@ -141,7 +156,29 @@
       "date": "2024-01",
       "location": "阿布扎比海滩",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "beach-001",
+          "src": "images/abu-dhabi/beach/photo1.jpg",
+          "type": "image",
+          "title": "蔚蓝海岸",
+          "description": "清澈的海水与细软的沙滩"
+        },
+        {
+          "id": "beach-002",
+          "src": "images/abu-dhabi/beach/photo2.jpg",
+          "type": "image",
+          "title": "日落时分",
+          "description": "海边的金色黄昏"
+        },
+        {
+          "id": "beach-003",
+          "src": "images/abu-dhabi/beach/photo3.jpg",
+          "type": "image",
+          "title": "海滩漫步",
+          "description": "享受海边的宁静时光"
+        }
+      ]
     },
     {
       "id": "abu-dhabi-desert",
@@ -153,7 +190,29 @@
       "date": "2024-01",
       "location": "阿布扎比沙漠",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "desert-001",
+          "src": "images/abu-dhabi/desert/photo1.jpg",
+          "type": "image",
+          "title": "沙丘之美",
+          "description": "连绵起伏的金色沙丘"
+        },
+        {
+          "id": "desert-002",
+          "src": "images/abu-dhabi/desert/photo2.jpg",
+          "type": "image",
+          "title": "沙漠日落",
+          "description": "壮丽的沙漠黄昏景色"
+        },
+        {
+          "id": "desert-003",
+          "src": "images/abu-dhabi/desert/photo3.jpg",
+          "type": "image",
+          "title": "沙漠探险",
+          "description": "感受沙漠的广袤无垠"
+        }
+      ]
     },
     {
       "id": "exhibition-video",
@@ -165,7 +224,22 @@
       "date": "2024-01",
       "location": "阿布扎比",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "exhibition-001",
+          "src": "images/abu-dhabi/exhibition/photo1.jpg",
+          "type": "image",
+          "title": "展会现场",
+          "description": "专业的展会活动拍摄"
+        },
+        {
+          "id": "exhibition-002",
+          "src": "images/abu-dhabi/exhibition/photo2.jpg",
+          "type": "image",
+          "title": "精彩瞬间",
+          "description": "记录展会的每一个重要时刻"
+        }
+      ]
     },
     {
       "id": "guangzhou-male-sihecheng",
@@ -177,7 +251,22 @@
       "date": "2024-02",
       "location": "广州四海城",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "male-shc-001",
+          "src": "images/guangzhou/male-sihecheng/photo1.jpg",
+          "type": "image",
+          "title": "潮流型男",
+          "description": "四海城时尚街拍"
+        },
+        {
+          "id": "male-shc-002",
+          "src": "images/guangzhou/male-sihecheng/photo2.jpg",
+          "type": "image",
+          "title": "街头风范",
+          "description": "展现个性与态度"
+        }
+      ]
     },
     {
       "id": "guangzhou-couple-shiguanglu",
@@ -257,7 +346,22 @@
       "date": "2024-02",
       "location": "广州湿地公园",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "wedding-001",
+          "src": "images/guangzhou/wedding-wetland/photo1.jpg",
+          "type": "image",
+          "title": "浪漫婚纱",
+          "description": "湿地公园的童话婚照"
+        },
+        {
+          "id": "wedding-002",
+          "src": "images/guangzhou/wedding-wetland/photo2.jpg",
+          "type": "image",
+          "title": "幸福时刻",
+          "description": "永恒的爱情纪念"
+        }
+      ]
     },
     {
       "id": "guangzhou-tower",
@@ -269,7 +373,22 @@
       "date": "2024-02",
       "location": "广州塔",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "tower-001",
+          "src": "images/guangzhou/tower/photo1.jpg",
+          "type": "image",
+          "title": "小蛮腰",
+          "description": "广州的标志性建筑"
+        },
+        {
+          "id": "tower-002",
+          "src": "images/guangzhou/tower/photo2.jpg",
+          "type": "image",
+          "title": "城市之光",
+          "description": "夜晚的广州塔"
+        }
+      ]
     },
     {
       "id": "haiou-island",
@@ -281,7 +400,22 @@
       "date": "2024-02",
       "location": "广州海鸥岛",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "haiou-001",
+          "src": "images/guangzhou/haiou-island/photo1.jpg",
+          "type": "image",
+          "title": "岛屿风光",
+          "description": "海鸥岛的自然美景"
+        },
+        {
+          "id": "haiou-002",
+          "src": "images/guangzhou/haiou-island/photo2.jpg",
+          "type": "image",
+          "title": "田园时光",
+          "description": "感受乡村的宁静"
+        }
+      ]
     },
     {
       "id": "product-photography",
@@ -293,7 +427,22 @@
       "date": "2024-02",
       "location": "广州",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "product-001",
+          "src": "images/guangzhou/product/photo1.jpg",
+          "type": "image",
+          "title": "商品展示",
+          "description": "专业的产品摄影"
+        },
+        {
+          "id": "product-002",
+          "src": "images/guangzhou/product/photo2.jpg",
+          "type": "image",
+          "title": "细节呈现",
+          "description": "突出产品特色"
+        }
+      ]
     },
     {
       "id": "promotional-video",
@@ -305,7 +454,15 @@
       "date": "2024-02",
       "location": "广州",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "promo-note",
+          "src": "images/guangzhou/promotional/video-poster.jpg",
+          "type": "image",
+          "title": "企业宣传片",
+          "description": "专业的企业形象展示（视频上传说明：将MP4视频文件放在此目录，并在JSON中添加type: 'video'）"
+        }
+      ]
     },
     {
       "id": "employee-video",
