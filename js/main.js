@@ -30,6 +30,7 @@ function renderPhotographerInfo() {
         contactElement.innerHTML = `
             ${photographer.contact.email ? `<div class="contact-item">📧 ${photographer.contact.email}</div>` : ''}
             ${photographer.contact.wechat ? `<div class="contact-item">💬 微信: ${photographer.contact.wechat}</div>` : ''}
+            ${photographer.contact.xiaohongshu ? `<div class="contact-item">📕 小红书: ${photographer.contact.xiaohongshu}</div>` : ''}
         `;
     }
 }
