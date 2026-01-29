@@ -1,5 +1,5 @@
 // Admin panel functionality
-const ADMIN_PASSWORD = 'admin123'; // Change this to your desired password
+const ADMIN_PASSWORD = 'Leo'; // Change this to your desired password
 const AUTH_KEY = 'leo_photo_admin_auth';
 
 let albumsData = null;

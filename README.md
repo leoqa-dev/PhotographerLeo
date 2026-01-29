@@ -93,7 +93,7 @@ PhotographerLeo/
 ### 管理员登录
 
 1. 访问 `/admin.html` 进入管理后台
-2. 默认密码：`admin123`
+2. 默认密码：`Leo`
 3. 可在 `js/admin.js` 中修改 `ADMIN_PASSWORD` 常量来更改密码
 
 ### 添加新相册
