@@ -226,6 +226,14 @@
       "shareEnabled": true,
       "photos": [
         {
+          "id": "exhibition-video-001",
+          "src": "images/abu-dhabi/exhibition/video1-poster.jpg",
+          "type": "video",
+          "poster": "images/abu-dhabi/exhibition/cover.jpg",
+          "title": "国际展会全程录像",
+          "description": "阿布扎比国际展会现场记录（视频演示占位符）"
+        },
+        {
           "id": "exhibition-001",
           "src": "images/abu-dhabi/exhibition/photo1.jpg",
           "type": "image",
@@ -456,11 +464,27 @@
       "shareEnabled": true,
       "photos": [
         {
-          "id": "promo-note",
+          "id": "promo-video-001",
+          "src": "images/guangzhou/promotional/video1-poster.jpg",
+          "type": "video",
+          "poster": "images/guangzhou/promotional/video1-poster.jpg",
+          "title": "企业形象宣传片",
+          "description": "展示企业文化与实力的专业宣传视频（演示占位符，替换为真实MP4文件路径即可播放）"
+        },
+        {
+          "id": "promo-video-002",
+          "src": "images/guangzhou/promotional/video2-poster.jpg",
+          "type": "video",
+          "poster": "images/guangzhou/promotional/video2-poster.jpg",
+          "title": "品牌故事短片",
+          "description": "讲述品牌发展历程的视频作品（演示占位符）"
+        },
+        {
+          "id": "promo-photo-001",
           "src": "images/guangzhou/promotional/video-poster.jpg",
           "type": "image",
-          "title": "企业宣传片",
-          "description": "专业的企业形象展示（视频上传说明：将MP4视频文件放在此目录，并在JSON中添加type: 'video'）"
+          "title": "宣传片拍摄花絮",
+          "description": "专业的企业形象展示"
         }
       ]
     },
@@ -474,7 +498,16 @@
       "date": "2024-02",
       "location": "广州",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "employee-video-001",
+          "src": "images/guangzhou/employee/video1-poster.jpg",
+          "type": "video",
+          "poster": "images/guangzhou/employee/cover.jpg",
+          "title": "2024年度优秀员工表彰",
+          "description": "记录优秀员工的荣耀时刻（视频演示占位符）"
+        }
+      ]
     },
     {
       "id": "event-video",
@@ -486,7 +519,24 @@
       "date": "2024-02",
       "location": "广州",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "event-video-001",
+          "src": "images/guangzhou/event/video1-poster.jpg",
+          "type": "video",
+          "poster": "images/guangzhou/event/cover.jpg",
+          "title": "企业年会活动",
+          "description": "精彩的年会现场全程记录（视频演示占位符）"
+        },
+        {
+          "id": "event-video-002",
+          "src": "images/guangzhou/event/video2-poster.jpg",
+          "type": "video",
+          "poster": "images/guangzhou/event/video2-poster.jpg",
+          "title": "团建活动精彩集锦",
+          "description": "团队建设活动的精彩瞬间（视频演示占位符）"
+        }
+      ]
     },
     {
       "id": "product-intro-video",
@@ -498,7 +548,16 @@
       "date": "2024-02",
       "location": "广州",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "product-video-001",
+          "src": "images/guangzhou/product-video/video1-poster.jpg",
+          "type": "video",
+          "poster": "images/guangzhou/product-video/cover.jpg",
+          "title": "新品发布介绍视频",
+          "description": "全方位展示产品特色与优势（视频演示占位符）"
+        }
+      ]
     },
     {
       "id": "store-intro-video",
@@ -510,7 +569,16 @@
       "date": "2024-02",
       "location": "广州",
       "shareEnabled": true,
-      "photos": []
+      "photos": [
+        {
+          "id": "store-video-001",
+          "src": "images/guangzhou/store-video/video1-poster.jpg",
+          "type": "video",
+          "poster": "images/guangzhou/store-video/cover.jpg",
+          "title": "旗舰店形象展示",
+          "description": "展示门店环境与服务（视频演示占位符）"
+        }
+      ]
     }
   ]
 }
