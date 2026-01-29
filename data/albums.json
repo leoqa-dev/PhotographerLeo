@@ -38,6 +38,18 @@
           "src": "images/abu-dhabi/louvre/photo1.jpg",
           "title": "光影穹顶",
           "description": "标志性的圆顶建筑"
+        },
+        {
+          "id": "louvre-002",
+          "src": "images/abu-dhabi/louvre/photo2.jpg",
+          "title": "艺术长廊",
+          "description": "现代化的展览空间"
+        },
+        {
+          "id": "louvre-003",
+          "src": "images/abu-dhabi/louvre/photo3.jpg",
+          "title": "海边博物馆",
+          "description": "建筑与海景的完美结合"
         }
       ]
     },
@@ -56,6 +68,18 @@
           "src": "images/abu-dhabi/grand-mosque/photo1.jpg",
           "title": "白色宫殿",
           "description": "清真寺的纯白外观"
+        },
+        {
+          "id": "mosque-002",
+          "src": "images/abu-dhabi/grand-mosque/photo2.jpg",
+          "title": "神圣殿堂",
+          "description": "宏伟的内部空间"
+        },
+        {
+          "id": "mosque-003",
+          "src": "images/abu-dhabi/grand-mosque/photo3.jpg",
+          "title": "建筑细节",
+          "description": "精美的装饰艺术"
         }
       ]
     },
@@ -74,6 +98,12 @@
           "src": "images/abu-dhabi/emirates-palace/photo1.jpg",
           "title": "金色宫殿",
           "description": "酒店的奢华外观"
+        },
+        {
+          "id": "palace-002",
+          "src": "images/abu-dhabi/emirates-palace/photo2.jpg",
+          "title": "皇家气派",
+          "description": "宏伟的建筑设计"
         }
       ]
     },
@@ -92,6 +122,18 @@
           "src": "images/guangzhou/male/photo1.jpg",
           "title": "城市男孩",
           "description": "现代都市男生写真"
+        },
+        {
+          "id": "male-002",
+          "src": "images/guangzhou/male/photo2.jpg",
+          "title": "街头风格",
+          "description": "时尚街拍造型"
+        },
+        {
+          "id": "male-003",
+          "src": "images/guangzhou/male/photo3.jpg",
+          "title": "自然光影",
+          "description": "阳光下的少年感"
         }
       ]
     },
@@ -110,6 +152,12 @@
           "src": "images/guangzhou/female/photo1.jpg",
           "title": "都市女孩",
           "description": "时尚女生人像"
+        },
+        {
+          "id": "female-002",
+          "src": "images/guangzhou/female/photo2.jpg",
+          "title": "清新自然",
+          "description": "日系清新风格"
         }
       ]
     },
@@ -128,6 +176,18 @@
           "src": "images/guangzhou/street/photo1.jpg",
           "title": "街头瞬间",
           "description": "捕捉城市生活"
+        },
+        {
+          "id": "street-002",
+          "src": "images/guangzhou/street/photo2.jpg",
+          "title": "都市节奏",
+          "description": "繁忙的城市街道"
+        },
+        {
+          "id": "street-003",
+          "src": "images/guangzhou/street/photo3.jpg",
+          "title": "光影交错",
+          "description": "街头的光与影"
         }
       ]
     },
@@ -146,6 +206,18 @@
           "src": "images/guangzhou/couple/photo1.jpg",
           "title": "浪漫时刻",
           "description": "情侣甜蜜瞬间"
+        },
+        {
+          "id": "couple-002",
+          "src": "images/guangzhou/couple/photo2.jpg",
+          "title": "牵手漫步",
+          "description": "一起走过的时光"
+        },
+        {
+          "id": "couple-003",
+          "src": "images/guangzhou/couple/photo3.jpg",
+          "title": "爱的瞬间",
+          "description": "记录幸福时刻"
         }
       ]
     }
