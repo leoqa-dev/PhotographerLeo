@@ -29,9 +29,21 @@
         <section class="album-header">
             <div class="container">
                 <a href="gallery.html" class="back-link">&larr; 返回作品集</a>
-                <h1 class="album-title" id="album-title">加载中...</h1>
-                <p class="album-description" id="album-description"></p>
-                <div class="album-meta" id="album-meta"></div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h1 class="album-title" id="album-title">加载中...</h1>
+                        <p class="album-description" id="album-description"></p>
+                        <div class="album-meta" id="album-meta"></div>
+                    </div>
+                    <div class="album-actions">
+                        <button class="btn btn-secondary" onclick="shareAlbum()" id="share-btn">
+                            🔗 分享相册
+                        </button>
+                        <button class="btn btn-secondary" onclick="downloadAll()" id="download-all-btn">
+                            ⬇️ 下载全部
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 

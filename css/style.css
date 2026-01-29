@@ -544,6 +544,103 @@ body {
     opacity: 1;
 }
 
+/* Video Support */
+.video-item {
+    position: relative;
+}
+
+.video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+}
+
+.video-item:hover .video-play-icon {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.media-type-badge {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* Download Button */
+.download-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--white);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+.photo-item:hover .download-btn {
+    opacity: 1;
+}
+
+.download-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* Album Actions */
+.album-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.album-actions .btn {
+    white-space: nowrap;
+}
+
+/* Lightbox Video */
+.lightbox-video {
+    max-width: 90vw;
+    max-height: 80vh;
+    outline: none;
+}
+
 /* Lightbox */
 .lightbox {
     display: none;
@@ -992,6 +1089,31 @@ body {
     .album-meta {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .album-actions {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .album-actions .btn {
+        flex: 1;
+        min-width: 0;
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+
+    .video-play-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .download-btn {
+        opacity: 1;
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
     }
 
     /* Lightbox */

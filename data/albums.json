@@ -11,216 +11,349 @@
   },
   "categories": [
     {
-      "id": "abu-dhabi",
-      "name": "阿布扎比",
-      "description": "阿布扎比城市风光与地标建筑",
+      "id": "abu-dhabi-dubai",
+      "name": "阿布扎比/迪拜",
+      "description": "阿布扎比与迪拜城市风光、地标建筑与活动记录",
       "type": "location"
     },
     {
       "id": "guangzhou",
       "name": "广州",
-      "description": "广州人像摄影作品",
+      "description": "广州人像摄影、街拍、产品拍摄与商业录像",
       "type": "location"
     }
   ],
   "albums": [
     {
-      "id": "louvre-abu-dhabi",
-      "title": "阿布扎比卢浮宫",
-      "description": "卢浮宫博物馆的建筑与光影",
-      "category": "abu-dhabi",
-      "tags": ["建筑", "风光", "艺术"],
-      "coverImage": "images/abu-dhabi/louvre/cover.jpg",
-      "date": "2024-01",
-      "location": "阿布扎比卢浮宫",
-      "photos": [
-        {
-          "id": "louvre-001",
-          "src": "images/abu-dhabi/louvre/photo1.jpg",
-          "title": "光影穹顶",
-          "description": "标志性的圆顶建筑"
-        },
-        {
-          "id": "louvre-002",
-          "src": "images/abu-dhabi/louvre/photo2.jpg",
-          "title": "艺术长廊",
-          "description": "现代化的展览空间"
-        },
-        {
-          "id": "louvre-003",
-          "src": "images/abu-dhabi/louvre/photo3.jpg",
-          "title": "海边博物馆",
-          "description": "建筑与海景的完美结合"
-        }
-      ]
-    },
-    {
-      "id": "grand-mosque",
-      "title": "大清真寺",
-      "description": "谢赫扎耶德大清真寺的宏伟建筑",
-      "category": "abu-dhabi",
+      "id": "abu-dhabi-grand-mosque",
+      "title": "阿布扎比大清真寺",
+      "description": "谢赫扎耶德大清真寺的宏伟建筑与神圣殿堂",
+      "category": "abu-dhabi-dubai",
       "tags": ["建筑", "宗教", "风光"],
       "coverImage": "images/abu-dhabi/grand-mosque/cover.jpg",
       "date": "2024-01",
       "location": "谢赫扎耶德大清真寺",
+      "shareEnabled": true,
       "photos": [
         {
           "id": "mosque-001",
           "src": "images/abu-dhabi/grand-mosque/photo1.jpg",
+          "type": "image",
           "title": "白色宫殿",
           "description": "清真寺的纯白外观"
         },
         {
           "id": "mosque-002",
           "src": "images/abu-dhabi/grand-mosque/photo2.jpg",
+          "type": "image",
           "title": "神圣殿堂",
           "description": "宏伟的内部空间"
         },
         {
           "id": "mosque-003",
           "src": "images/abu-dhabi/grand-mosque/photo3.jpg",
+          "type": "image",
           "title": "建筑细节",
           "description": "精美的装饰艺术"
         }
       ]
     },
     {
+      "id": "louvre-abu-dhabi",
+      "title": "阿布扎比卢浮宫",
+      "description": "卢浮宫博物馆的建筑与光影艺术",
+      "category": "abu-dhabi-dubai",
+      "tags": ["建筑", "风光", "艺术"],
+      "coverImage": "images/abu-dhabi/louvre/cover.jpg",
+      "date": "2024-01",
+      "location": "阿布扎比卢浮宫",
+      "shareEnabled": true,
+      "photos": [
+        {
+          "id": "louvre-001",
+          "src": "images/abu-dhabi/louvre/photo1.jpg",
+          "type": "image",
+          "title": "光影穹顶",
+          "description": "标志性的圆顶建筑"
+        },
+        {
+          "id": "louvre-002",
+          "src": "images/abu-dhabi/louvre/photo2.jpg",
+          "type": "image",
+          "title": "艺术长廊",
+          "description": "现代化的展览空间"
+        },
+        {
+          "id": "louvre-003",
+          "src": "images/abu-dhabi/louvre/photo3.jpg",
+          "type": "image",
+          "title": "海边博物馆",
+          "description": "建筑与海景的完美结合"
+        }
+      ]
+    },
+    {
       "id": "emirates-palace",
-      "title": "皇宫酒店",
-      "description": "奢华的阿联酋皇宫酒店",
-      "category": "abu-dhabi",
+      "title": "阿布扎比皇宫酒店",
+      "description": "奢华的阿联酋皇宫酒店建筑风采",
+      "category": "abu-dhabi-dubai",
       "tags": ["建筑", "奢华", "风光"],
       "coverImage": "images/abu-dhabi/emirates-palace/cover.jpg",
       "date": "2024-01",
       "location": "阿联酋皇宫酒店",
+      "shareEnabled": true,
       "photos": [
         {
           "id": "palace-001",
           "src": "images/abu-dhabi/emirates-palace/photo1.jpg",
+          "type": "image",
           "title": "金色宫殿",
           "description": "酒店的奢华外观"
         },
         {
           "id": "palace-002",
           "src": "images/abu-dhabi/emirates-palace/photo2.jpg",
+          "type": "image",
           "title": "皇家气派",
           "description": "宏伟的建筑设计"
         }
       ]
     },
     {
-      "id": "guangzhou-male",
-      "title": "男生写真",
-      "description": "广州男生人像摄影作品",
-      "category": "guangzhou",
-      "tags": ["男生", "人像", "写真"],
-      "coverImage": "images/guangzhou/male/cover.jpg",
-      "date": "2024-02",
-      "location": "广州",
-      "photos": [
-        {
-          "id": "male-001",
-          "src": "images/guangzhou/male/photo1.jpg",
-          "title": "城市男孩",
-          "description": "现代都市男生写真"
-        },
-        {
-          "id": "male-002",
-          "src": "images/guangzhou/male/photo2.jpg",
-          "title": "街头风格",
-          "description": "时尚街拍造型"
-        },
-        {
-          "id": "male-003",
-          "src": "images/guangzhou/male/photo3.jpg",
-          "title": "自然光影",
-          "description": "阳光下的少年感"
-        }
-      ]
+      "id": "abrahamic-family-house",
+      "title": "阿布扎比亚伯拉罕之家",
+      "description": "宗教和谐共存的标志性建筑",
+      "category": "abu-dhabi-dubai",
+      "tags": ["建筑", "宗教", "文化"],
+      "coverImage": "images/abu-dhabi/abrahamic-house/cover.jpg",
+      "date": "2024-01",
+      "location": "亚伯拉罕之家",
+      "shareEnabled": true,
+      "photos": []
     },
     {
-      "id": "guangzhou-female",
-      "title": "女生写真",
-      "description": "广州女生人像摄影作品",
-      "category": "guangzhou",
-      "tags": ["女生", "人像", "写真"],
-      "coverImage": "images/guangzhou/female/cover.jpg",
-      "date": "2024-02",
-      "location": "广州",
-      "photos": [
-        {
-          "id": "female-001",
-          "src": "images/guangzhou/female/photo1.jpg",
-          "title": "都市女孩",
-          "description": "时尚女生人像"
-        },
-        {
-          "id": "female-002",
-          "src": "images/guangzhou/female/photo2.jpg",
-          "title": "清新自然",
-          "description": "日系清新风格"
-        }
-      ]
+      "id": "abu-dhabi-beach",
+      "title": "阿布扎比沙滩",
+      "description": "阿布扎比美丽的海滩风光",
+      "category": "abu-dhabi-dubai",
+      "tags": ["风光", "海滩", "自然"],
+      "coverImage": "images/abu-dhabi/beach/cover.jpg",
+      "date": "2024-01",
+      "location": "阿布扎比海滩",
+      "shareEnabled": true,
+      "photos": []
     },
     {
-      "id": "guangzhou-street",
-      "title": "街拍作品",
-      "description": "广州街头摄影",
-      "category": "guangzhou",
-      "tags": ["街拍", "纪实", "城市"],
-      "coverImage": "images/guangzhou/street/cover.jpg",
-      "date": "2024-02",
-      "location": "广州",
-      "photos": [
-        {
-          "id": "street-001",
-          "src": "images/guangzhou/street/photo1.jpg",
-          "title": "街头瞬间",
-          "description": "捕捉城市生活"
-        },
-        {
-          "id": "street-002",
-          "src": "images/guangzhou/street/photo2.jpg",
-          "title": "都市节奏",
-          "description": "繁忙的城市街道"
-        },
-        {
-          "id": "street-003",
-          "src": "images/guangzhou/street/photo3.jpg",
-          "title": "光影交错",
-          "description": "街头的光与影"
-        }
-      ]
+      "id": "abu-dhabi-desert",
+      "title": "阿布扎比沙漠",
+      "description": "壮观的沙漠景观与日落",
+      "category": "abu-dhabi-dubai",
+      "tags": ["风光", "沙漠", "自然"],
+      "coverImage": "images/abu-dhabi/desert/cover.jpg",
+      "date": "2024-01",
+      "location": "阿布扎比沙漠",
+      "shareEnabled": true,
+      "photos": []
     },
     {
-      "id": "guangzhou-couple",
-      "title": "情侣摄影",
-      "description": "广州情侣人像作品",
+      "id": "exhibition-video",
+      "title": "展会活动录像",
+      "description": "展会活动现场录像与精彩瞬间",
+      "category": "abu-dhabi-dubai",
+      "tags": ["视频", "活动", "商业"],
+      "coverImage": "images/abu-dhabi/exhibition/cover.jpg",
+      "date": "2024-01",
+      "location": "阿布扎比",
+      "shareEnabled": true,
+      "photos": []
+    },
+    {
+      "id": "guangzhou-male-sihecheng",
+      "title": "男生四海城街拍",
+      "description": "四海城街拍男生人像作品",
       "category": "guangzhou",
-      "tags": ["情侣", "人像", "浪漫"],
-      "coverImage": "images/guangzhou/couple/cover.jpg",
+      "tags": ["男生", "街拍", "人像"],
+      "coverImage": "images/guangzhou/male-sihecheng/cover.jpg",
       "date": "2024-02",
-      "location": "广州",
+      "location": "广州四海城",
+      "shareEnabled": true,
+      "photos": []
+    },
+    {
+      "id": "guangzhou-couple-shiguanglu",
+      "title": "情侣市广路街拍",
+      "description": "市广路情侣街拍作品",
+      "category": "guangzhou",
+      "tags": ["情侣", "街拍", "人像"],
+      "coverImage": "images/guangzhou/couple-shiguanglu/cover.jpg",
+      "date": "2024-02",
+      "location": "广州市广路",
+      "shareEnabled": true,
       "photos": [
         {
           "id": "couple-001",
           "src": "images/guangzhou/couple/photo1.jpg",
+          "type": "image",
           "title": "浪漫时刻",
           "description": "情侣甜蜜瞬间"
         },
         {
           "id": "couple-002",
           "src": "images/guangzhou/couple/photo2.jpg",
+          "type": "image",
           "title": "牵手漫步",
           "description": "一起走过的时光"
         },
         {
           "id": "couple-003",
           "src": "images/guangzhou/couple/photo3.jpg",
+          "type": "image",
           "title": "爱的瞬间",
           "description": "记录幸福时刻"
         }
       ]
+    },
+    {
+      "id": "guangzhou-male-shiguanglu",
+      "title": "男生市广路街拍",
+      "description": "市广路男生街拍作品",
+      "category": "guangzhou",
+      "tags": ["男生", "街拍", "人像"],
+      "coverImage": "images/guangzhou/male-shiguanglu/cover.jpg",
+      "date": "2024-02",
+      "location": "广州市广路",
+      "shareEnabled": true,
+      "photos": [
+        {
+          "id": "male-001",
+          "src": "images/guangzhou/male/photo1.jpg",
+          "type": "image",
+          "title": "城市男孩",
+          "description": "现代都市男生写真"
+        },
+        {
+          "id": "male-002",
+          "src": "images/guangzhou/male/photo2.jpg",
+          "type": "image",
+          "title": "街头风格",
+          "description": "时尚街拍造型"
+        },
+        {
+          "id": "male-003",
+          "src": "images/guangzhou/male/photo3.jpg",
+          "type": "image",
+          "title": "自然光影",
+          "description": "阳光下的少年感"
+        }
+      ]
+    },
+    {
+      "id": "guangzhou-wedding-wetland",
+      "title": "广州湿地公园结婚照",
+      "description": "湿地公园浪漫婚纱摄影",
+      "category": "guangzhou",
+      "tags": ["婚纱", "婚礼", "人像"],
+      "coverImage": "images/guangzhou/wedding-wetland/cover.jpg",
+      "date": "2024-02",
+      "location": "广州湿地公园",
+      "shareEnabled": true,
+      "photos": []
+    },
+    {
+      "id": "guangzhou-tower",
+      "title": "广州塔",
+      "description": "广州地标建筑摄影",
+      "category": "guangzhou",
+      "tags": ["建筑", "风光", "地标"],
+      "coverImage": "images/guangzhou/tower/cover.jpg",
+      "date": "2024-02",
+      "location": "广州塔",
+      "shareEnabled": true,
+      "photos": []
+    },
+    {
+      "id": "haiou-island",
+      "title": "海鸥岛",
+      "description": "海鸥岛自然风光与人像",
+      "category": "guangzhou",
+      "tags": ["风光", "人像", "自然"],
+      "coverImage": "images/guangzhou/haiou-island/cover.jpg",
+      "date": "2024-02",
+      "location": "广州海鸥岛",
+      "shareEnabled": true,
+      "photos": []
+    },
+    {
+      "id": "product-photography",
+      "title": "产品拍摄",
+      "description": "专业产品摄影与商业拍摄",
+      "category": "guangzhou",
+      "tags": ["产品", "商业", "摄影"],
+      "coverImage": "images/guangzhou/product/cover.jpg",
+      "date": "2024-02",
+      "location": "广州",
+      "shareEnabled": true,
+      "photos": []
+    },
+    {
+      "id": "promotional-video",
+      "title": "宣传录像",
+      "description": "企业宣传片与品牌录像",
+      "category": "guangzhou",
+      "tags": ["视频", "宣传", "商业"],
+      "coverImage": "images/guangzhou/promotional/cover.jpg",
+      "date": "2024-02",
+      "location": "广州",
+      "shareEnabled": true,
+      "photos": []
+    },
+    {
+      "id": "employee-video",
+      "title": "优秀员工年终录像",
+      "description": "年终优秀员工表彰录像",
+      "category": "guangzhou",
+      "tags": ["视频", "企业", "活动"],
+      "coverImage": "images/guangzhou/employee/cover.jpg",
+      "date": "2024-02",
+      "location": "广州",
+      "shareEnabled": true,
+      "photos": []
+    },
+    {
+      "id": "event-video",
+      "title": "活动录像",
+      "description": "各类活动现场录像记录",
+      "category": "guangzhou",
+      "tags": ["视频", "活动", "纪实"],
+      "coverImage": "images/guangzhou/event/cover.jpg",
+      "date": "2024-02",
+      "location": "广州",
+      "shareEnabled": true,
+      "photos": []
+    },
+    {
+      "id": "product-intro-video",
+      "title": "产品介绍录像",
+      "description": "产品展示与介绍视频制作",
+      "category": "guangzhou",
+      "tags": ["视频", "产品", "商业"],
+      "coverImage": "images/guangzhou/product-video/cover.jpg",
+      "date": "2024-02",
+      "location": "广州",
+      "shareEnabled": true,
+      "photos": []
+    },
+    {
+      "id": "store-intro-video",
+      "title": "门店介绍录像",
+      "description": "门店形象展示与介绍视频",
+      "category": "guangzhou",
+      "tags": ["视频", "商业", "门店"],
+      "coverImage": "images/guangzhou/store-video/cover.jpg",
+      "date": "2024-02",
+      "location": "广州",
+      "shareEnabled": true,
+      "photos": []
     }
   ]
 }
