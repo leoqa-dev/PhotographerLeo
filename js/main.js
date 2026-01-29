@@ -1,16 +1,141 @@
 // Main page functionality
 let albumsData = null;
+let currentSlide = 0;
+let slideInterval = null;
 
 // Load data from JSON file
 async function loadData() {
     try {
         const response = await fetch('data/albums.json');
         albumsData = await response.json();
+        initHeroSlider();
         renderPhotographerInfo();
         renderCategories();
         renderFeaturedAlbums();
     } catch (error) {
         console.error('Error loading data:', error);
+    }
+}
+
+// Initialize Hero Slider
+function initHeroSlider() {
+    if (!albumsData || !albumsData.albums) return;
+
+    const sliderContainer = document.querySelector('.slider-container');
+    const sliderDots = document.getElementById('slider-dots');
+
+    if (!sliderContainer || !sliderDots) return;
+
+    // Create slides from album covers
+    albumsData.albums.forEach((album, index) => {
+        // Create slide
+        const slide = document.createElement('div');
+        slide.className = `slider-slide ${index === 0 ? 'active' : ''}`;
+        slide.style.backgroundImage = `url('${album.coverImage}')`;
+        slide.dataset.title = album.title;
+        slide.dataset.category = album.category === 'abu-dhabi' ? '阿布扎比' : '广州';
+        sliderContainer.appendChild(slide);
+
+        // Create dot
+        const dot = document.createElement('span');
+        dot.className = `slider-dot ${index === 0 ? 'active' : ''}`;
+        dot.addEventListener('click', () => goToSlide(index));
+        sliderDots.appendChild(dot);
+    });
+
+    // Setup navigation
+    document.getElementById('slider-prev')?.addEventListener('click', () => {
+        changeSlide(-1);
+    });
+
+    document.getElementById('slider-next')?.addEventListener('click', () => {
+        changeSlide(1);
+    });
+
+    // Start auto-play
+    startSlideshow();
+
+    // Pause on hover
+    const heroSlider = document.getElementById('hero-slider');
+    if (heroSlider) {
+        heroSlider.addEventListener('mouseenter', stopSlideshow);
+        heroSlider.addEventListener('mouseleave', startSlideshow);
+    }
+}
+
+function changeSlide(direction) {
+    const slides = document.querySelectorAll('.slider-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+
+    if (slides.length === 0) return;
+
+    // Remove active class
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+
+    // Calculate new slide index
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+    // Add active class
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+
+    // Update title
+    updateSlideInfo();
+}
+
+function goToSlide(index) {
+    const slides = document.querySelectorAll('.slider-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+
+    if (slides.length === 0) return;
+
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+
+    currentSlide = index;
+
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+
+    updateSlideInfo();
+
+    // Reset auto-play
+    stopSlideshow();
+    startSlideshow();
+}
+
+function updateSlideInfo() {
+    const slides = document.querySelectorAll('.slider-slide');
+    if (slides.length === 0) return;
+
+    const currentSlideElement = slides[currentSlide];
+    const title = currentSlideElement.dataset.title;
+    const category = currentSlideElement.dataset.category;
+
+    const titleElement = document.getElementById('slider-title');
+    const subtitleElement = document.getElementById('slider-subtitle');
+
+    if (titleElement) {
+        titleElement.textContent = title;
+    }
+
+    if (subtitleElement) {
+        subtitleElement.textContent = `${category} | 专注人像摄影`;
+    }
+}
+
+function startSlideshow() {
+    stopSlideshow();
+    slideInterval = setInterval(() => {
+        changeSlide(1);
+    }, 5000); // Change slide every 5 seconds
+}
+
+function stopSlideshow() {
+    if (slideInterval) {
+        clearInterval(slideInterval);
+        slideInterval = null;
     }
 }
 
