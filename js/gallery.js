@@ -12,8 +12,12 @@ async function loadData() {
         // Check URL parameters
         const urlParams = new URLSearchParams(window.location.search);
         const categoryParam = urlParams.get('category');
+        const tagParam = urlParams.get('tag');
         if (categoryParam) {
             currentFilter = categoryParam;
+        }
+        if (tagParam) {
+            currentTags = [tagParam];
         }
 
         renderTags();
@@ -47,6 +51,10 @@ function renderTags() {
 
     // Add click event listeners
     tagsFilterElement.querySelectorAll('.tag-filter').forEach(btn => {
+        if (currentTags.includes(btn.dataset.tag)) {
+            btn.classList.add('active');
+        }
+
         btn.addEventListener('click', () => {
             const tag = btn.dataset.tag;
             if (currentTags.includes(tag)) {

@@ -3,71 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人摄影师Leo</title>
+    <meta name="description" content="Leo provides commercial video production, advertising photography, event coverage, brand content and destination portrait photography in the UAE and Guangzhou.">
+    <title>Leo Photography | UAE & Guangzhou Commercial Video Production</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home-page">
     <header class="header">
         <nav class="nav">
-            <div class="logo">个人摄影师Leo</div>
-            <div class="menu-toggle" id="mobile-menu">
+            <a class="logo" href="index.html">
+                <span>Leo</span>
+                <small>Photography</small>
+            </a>
+            <div class="menu-toggle" id="mobile-menu" aria-label="打开导航" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="active">首页</a></li>
-                <li><a href="gallery.html">作品集</a></li>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="admin.html" class="admin-link">管理</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="gallery.html">Portfolio</a></li>
+                <li><a href="#about">关于 Leo</a></li>
+                <li><a href="#contact" class="nav-cta">Book / 预约</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Slider Section -->
-        <section class="hero-slider" id="hero-slider">
-            <div class="slider-container">
-                <!-- Slides will be loaded here -->
+        <section class="marketing-hero" id="top">
+            <div class="hero-media" id="hero-media"></div>
+            <div class="liquid-field" aria-hidden="true"></div>
+            <div class="hero-shade"></div>
+            <div class="hero-inner">
+                <p class="eyebrow">UAE · Guangzhou · Bilingual Service</p>
+                <h1>Commercial Video & Advertising Photography</h1>
+                <p class="hero-copy">为阿联酋与广州的品牌、门店、活动和广告项目制作专业影像内容。Commercial video, campaign photography and destination portraits for Chinese and international clients.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Discuss a Project</a>
+                    <a href="gallery.html" class="btn btn-ghost">View Portfolio</a>
+                </div>
+                <div class="hero-proof">
+                    <span>Brand Video</span>
+                    <span>Event Coverage</span>
+                    <span>Product / Store</span>
+                    <span>Portrait Campaign</span>
+                </div>
             </div>
-            <div class="slider-overlay"></div>
-            <div class="slider-content">
-                <h1 class="slider-title" id="slider-title">个人摄影师Leo</h1>
-                <p class="slider-subtitle" id="slider-subtitle">专注人像摄影 | 记录美好瞬间</p>
-                <a href="gallery.html" class="btn btn-primary">查看作品</a>
-            </div>
-            <button class="slider-nav slider-prev" id="slider-prev">‹</button>
-            <button class="slider-nav slider-next" id="slider-next">›</button>
-            <div class="slider-dots" id="slider-dots"></div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
+        <section class="service-band" id="services">
             <div class="container">
-                <h2 class="section-title">关于我</h2>
-                <div class="about-content">
+                <div class="section-heading">
+                    <p class="eyebrow">Services</p>
+                    <h2>面向品牌增长的商业影像服务</h2>
+                    <p>清晰服务中国与海外客户：广告内容、品牌短片、活动记录、门店展示、产品素材与高端肖像。</p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <img src="images/guangzhou/promotional/cover.jpg" alt="商业录像案例">
+                        <div>
+                            <span>01</span>
+                            <h3>Commercial Video Production</h3>
+                            <p>品牌宣传片、广告短片、门店介绍、产品视频与活动花絮，适合 Instagram、TikTok、小红书、官网和广告投放。</p>
+                            <a href="gallery.html?tag=视频">View video work</a>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <img src="images/abu-dhabi/exhibition/cover.jpg" alt="活动与展会拍摄案例">
+                        <div>
+                            <span>02</span>
+                            <h3>Event & Exhibition Coverage</h3>
+                            <p>服务阿联酋和广州展会、发布会、企业活动、门店开业与品牌活动，输出可用于 PR、社媒和客户汇报的照片与视频。</p>
+                            <a href="gallery.html?tag=活动">View event work</a>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <img src="images/guangzhou/product/cover.jpg" alt="产品和门店拍摄案例">
+                        <div>
+                            <span>03</span>
+                            <h3>Advertising Photography</h3>
+                            <p>产品、门店、酒店、餐饮、空间、团队形象和个人品牌肖像，制作适合广告、菜单、官网和社媒的视觉资产。</p>
+                            <a href="gallery.html?tag=商业">View commercial work</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="market-band">
+            <div class="container market-layout">
+                <div>
+                    <p class="eyebrow">Markets</p>
+                    <h2>服务阿联酋与广州，也服务国际客户</h2>
+                    <p>From UAE business campaigns to Guangzhou brand content, Leo works with Chinese and international clients who need clean, professional and conversion-ready visuals.</p>
+                </div>
+                <div class="market-grid">
+                    <div>
+                        <span>UAE</span>
+                        <h3>Abu Dhabi / Dubai</h3>
+                        <p>Exhibitions, hospitality, destination campaigns, tourism portraits, luxury spaces and social media content.</p>
+                    </div>
+                    <div>
+                        <span>China</span>
+                        <h3>Guangzhou</h3>
+                        <p>Brand videos, product launches, store content, corporate events, commercial portraits and advertising assets.</p>
+                    </div>
+                    <div>
+                        <span>Bilingual</span>
+                        <h3>中文 / English</h3>
+                        <p>Clear communication for Chinese brands, overseas founders, local businesses and international teams.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-work">
+            <div class="container">
+                <div class="section-heading split">
+                    <div>
+                        <p class="eyebrow">Selected Work</p>
+                        <h2>Commercial Portfolio</h2>
+                    </div>
+                    <a href="gallery.html" class="text-link">View all</a>
+                </div>
+                <div class="portfolio-grid" id="featured-albums"></div>
+            </div>
+        </section>
+
+        <section class="process-band">
+            <div class="container process-layout">
+                <div class="section-heading">
+                    <p class="eyebrow">Workflow</p>
+                    <h2>专业项目流程，减少沟通成本</h2>
+                </div>
+                <div class="process-list">
+                    <div>
+                        <span>01</span>
+                        <h3>Brief & Objective</h3>
+                        <p>确认品牌目标、目标平台、拍摄地点、参考风格、语言需求和交付格式。</p>
+                    </div>
+                    <div>
+                        <span>02</span>
+                        <h3>Shot Plan</h3>
+                        <p>根据广告用途、活动流程或旅拍路线，规划镜头、场景、时间和关键画面。</p>
+                    </div>
+                    <div>
+                        <span>03</span>
+                        <h3>Production & Delivery</h3>
+                        <p>完成拍摄、筛选、调色、剪辑与精修，交付可直接用于广告、官网和社媒发布的素材。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-marketing">
+            <div class="container about-layout">
+                <div>
+                    <p class="eyebrow">About Leo</p>
+                    <h2>专业商业视角，也保留真实人物质感</h2>
+                </div>
+                <div>
+                    <p class="about-lead">Leo provides commercial video and photography services across the UAE and Guangzhou, with a focus on brand image, advertising content, events, stores, products and destination portraits.</p>
                     <p id="photographer-bio">加载中...</p>
                     <div class="contact-info" id="contact-info"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Categories Section -->
-        <section class="categories">
-            <div class="container">
-                <h2 class="section-title">拍摄分类</h2>
-                <div class="category-grid" id="category-grid">
-                    <!-- Categories will be loaded here -->
+        <section id="contact" class="contact-cta">
+            <div class="container contact-layout">
+                <div>
+                    <p class="eyebrow">Booking</p>
+                    <h2>Tell me about your campaign, event or brand story</h2>
+                    <p>请发送城市、项目类型、拍摄日期、使用平台、期望成片时长或照片数量。English inquiries are welcome.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Featured Albums -->
-        <section class="featured">
-            <div class="container">
-                <h2 class="section-title">精选作品</h2>
-                <div class="album-grid" id="featured-albums">
-                    <!-- Featured albums will be loaded here -->
+                <div class="contact-panel">
+                    <a class="contact-button" href="mailto:13005442629@163.com?subject=Commercial video / photography inquiry">Email for quotation</a>
+                    <a class="contact-button" href="gallery.html">View portfolio first</a>
+                    <p>微信：<strong>LI920520414</strong></p>
+                    <p>小红书：<strong>阿布扎比摄影师-Leo</strong></p>
                 </div>
             </div>
         </section>
@@ -75,7 +189,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Leo Photography. All rights reserved.</p>
+            <p>&copy; 2026 Leo Photography. Commercial Video & Portrait Photography.</p>
         </div>
     </footer>
 
