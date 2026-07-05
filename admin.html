@@ -6,10 +6,14 @@
     <title>管理后台 - 个人摄影师Leo</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="glass-page admin-page">
+    <canvas id="glass-bg-canvas" class="glass-bg-canvas" aria-hidden="true"></canvas>
     <header class="header">
         <nav class="nav">
-            <div class="logo">个人摄影师Leo</div>
+            <a class="logo" href="index.html">
+                <span>Leo</span>
+                <small>Photography</small>
+            </a>
             <div class="menu-toggle" id="mobile-menu">
                 <span></span>
                 <span></span>
@@ -203,6 +207,7 @@ images/
         </div>
     </div>
 
+    <script src="js/glass-bg.js"></script>
     <script src="js/admin.js"></script>
 </body>
 </html>

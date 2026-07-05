@@ -29,19 +29,16 @@ function renderPhotographerInfo() {
     if (!albumsData || !albumsData.photographer) return;
 
     const photographer = albumsData.photographer;
-    const bioElement = document.getElementById('photographer-bio');
     const contactElement = document.getElementById('contact-info');
-
-    if (bioElement) {
-        bioElement.textContent = photographer.bio;
-    }
 
     if (contactElement && photographer.contact) {
         contactElement.innerHTML = `
-            ${photographer.contact.email ? `<a class="contact-item" href="mailto:${photographer.contact.email}">邮箱 ${photographer.contact.email}</a>` : ''}
-            ${photographer.contact.wechat ? `<span class="contact-item">微信 ${photographer.contact.wechat}</span>` : ''}
-            ${photographer.contact.xiaohongshu ? `<span class="contact-item">小红书 ${photographer.contact.xiaohongshu}</span>` : ''}
+            <a class="contact-item glass-card draggable-card" href="https://wa.me/8613005442629" target="_blank" rel="noopener">WhatsApp +86 130 0544 2629</a>
+            ${photographer.contact.email ? `<a class="contact-item glass-card draggable-card" href="mailto:${photographer.contact.email}">Email ${photographer.contact.email}</a>` : ''}
+            ${photographer.contact.wechat ? `<span class="contact-item glass-card draggable-card">WeChat ${photographer.contact.wechat}</span>` : ''}
+            ${photographer.contact.xiaohongshu ? `<span class="contact-item glass-card draggable-card">Xiaohongshu ${photographer.contact.xiaohongshu}</span>` : ''}
         `;
+        if (window.LeoGlassCards) window.LeoGlassCards.setup();
     }
 }
 
@@ -64,20 +61,49 @@ function renderFeaturedAlbums() {
         .map(id => albumsData.albums.find(album => album.id === id))
         .filter(Boolean);
 
-    featuredAlbumsElement.innerHTML = featuredAlbums.map(album => `
-        <article class="portfolio-card" onclick="window.location.href='album.html?id=${album.id}'">
+    const lang = window.LeoI18n ? window.LeoI18n.getLanguage() : 'en';
+    const tagMap = {
+        '视频': { en: 'Video', zh: '视频' },
+        '活动': { en: 'Event', zh: '活动' },
+        '商业': { en: 'Commercial', zh: '商业' },
+        '产品': { en: 'Product', zh: '产品' },
+        '广州': { en: 'Guangzhou', zh: '广州' },
+        '建筑': { en: 'Architecture', zh: '建筑' },
+        '风光': { en: 'Landscape', zh: '风光' }
+    };
+    const titleMap = {
+        'promotional-video': { en: 'Brand Promotional Video', zh: '品牌宣传片' },
+        'store-intro-video': { en: 'Store Introduction Video', zh: '门店介绍视频' },
+        'product-intro-video': { en: 'Product Introduction Video', zh: '产品介绍视频' },
+        'exhibition-video': { en: 'Exhibition Event Coverage', zh: '展会活动录像' },
+        'abu-dhabi-grand-mosque': { en: 'Abu Dhabi Destination Portrait', zh: '阿布扎比目的地影像' },
+        'guangzhou-wedding-wetland': { en: 'Guangzhou Portrait Campaign', zh: '广州人像拍摄' }
+    };
+    const locationMap = {
+        '谢赫扎耶德大清真寺': { en: 'Abu Dhabi', zh: '阿布扎比' },
+        '广州': { en: 'Guangzhou', zh: '广州' },
+        '阿布扎比': { en: 'Abu Dhabi', zh: '阿布扎比' }
+    };
+
+    featuredAlbumsElement.innerHTML = featuredAlbums.map(album => {
+        const displayTitle = titleMap[album.id] ? titleMap[album.id][lang] : album.title;
+        const displayLocation = locationMap[album.location] ? locationMap[album.location][lang] : (album.location || (lang === 'zh' ? '广州 / 阿布扎比' : 'Guangzhou / Abu Dhabi'));
+        return `
+        <article class="portfolio-card glass-card draggable-card" onclick="window.location.href='album.html?id=${album.id}'">
             <div class="portfolio-image">
-                <img src="${album.coverImage}" alt="${album.title}" onerror="this.parentElement.innerHTML='<div class=\\'image-fallback\\'>暂无图片</div>'">
+                <img src="${album.coverImage}" alt="${displayTitle}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'image-fallback\\'>${lang === 'zh' ? '暂无图片' : 'No image'}</div>'">
             </div>
             <div class="portfolio-info">
-                <p>${album.location || '广州 / 阿布扎比'}</p>
-                <h3>${album.title}</h3>
+                <p>${displayLocation}</p>
+                <h3>${displayTitle}</h3>
                 <div>
-                    ${album.tags.slice(0, 3).map(tag => `<span>${tag}</span>`).join('')}
+                    ${album.tags.slice(0, 3).map(tag => `<span>${tagMap[tag] ? tagMap[tag][lang] : tag}</span>`).join('')}
                 </div>
             </div>
         </article>
-    `).join('');
+    `;
+    }).join('');
+    if (window.LeoGlassCards) window.LeoGlassCards.setup();
 }
 
 function setupMobileMenu() {
@@ -111,4 +137,7 @@ function setupMobileMenu() {
 document.addEventListener('DOMContentLoaded', () => {
     loadData();
     setupMobileMenu();
+    window.addEventListener('leo:languagechange', () => {
+        renderFeaturedAlbums();
+    });
 });

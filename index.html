@@ -1,33 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Leo provides commercial video production, advertising photography, event coverage, brand content and destination portrait photography in the UAE and Guangzhou.">
-    <title>Leo Photography | UAE & Guangzhou Commercial Video Production</title>
+    <meta name="description" content="Commercial video production and advertising photography in UAE, Dubai, Abu Dhabi and Guangzhou. Brand videos, event coverage, product photography and destination portraits.">
+    <meta name="keywords" content="UAE commercial photographer, Dubai videographer, Abu Dhabi event photographer, Guangzhou commercial photography, Chinese photographer in UAE, brand video UAE, advertising photographer Guangzhou">
+    <meta property="og:title" content="Leo Photography | UAE & Guangzhou Commercial Photographer / Videographer">
+    <meta property="og:description" content="Commercial video production, advertising photography, event coverage and destination portraits for Chinese and international clients.">
+    <meta property="og:type" content="website">
+    <title>Leo Photography | UAE & Guangzhou Commercial Photographer / Videographer</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="home-page">
+<body class="home-page glass-page">
+    <canvas id="glass-bg-canvas" class="glass-bg-canvas" aria-hidden="true"></canvas>
     <header class="header">
         <nav class="nav">
-            <a class="logo" href="index.html">
+            <a class="logo" href="index.html" aria-label="Leo Photography home">
                 <span>Leo</span>
                 <small>Photography</small>
             </a>
-            <div class="menu-toggle" id="mobile-menu" aria-label="打开导航" role="button" tabindex="0">
+            <div class="menu-toggle" id="mobile-menu" aria-label="Open navigation" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="active">首页</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="gallery.html">Portfolio</a></li>
-                <li><a href="#about">关于 Leo</a></li>
-                <li><a href="#contact" class="nav-cta">Book / 预约</a></li>
+                <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+                <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                <li><a href="gallery.html" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li>
+                    <div class="language-switch" aria-label="Language switch">
+                        <button type="button" class="lang-option" data-lang="zh" onclick="window.LeoI18n && window.LeoI18n.setLanguage('zh')">CN</button>
+                        <span></span>
+                        <button type="button" class="lang-option" data-lang="en" onclick="window.LeoI18n && window.LeoI18n.setLanguage('en')">EN</button>
+                    </div>
+                </li>
+                <li><a href="#contact" class="nav-cta" data-i18n="nav.cta">Get a Quote</a></li>
             </ul>
         </nav>
     </header>
+
+    <button class="reset-layout-btn" type="button" data-reset-glass data-i18n="glass.reset">Reset layout</button>
 
     <main>
         <section class="marketing-hero" id="top">
@@ -35,55 +49,65 @@
             <div class="liquid-field" aria-hidden="true"></div>
             <div class="hero-shade"></div>
             <div class="hero-inner">
-                <p class="eyebrow">UAE · Guangzhou · Bilingual Service</p>
-                <h1>Commercial Video & Advertising Photography</h1>
-                <p class="hero-copy">为阿联酋与广州的品牌、门店、活动和广告项目制作专业影像内容。Commercial video, campaign photography and destination portraits for Chinese and international clients.</p>
+                <p class="eyebrow" data-i18n="hero.eyebrow">UAE · Guangzhou · Commercial Visuals</p>
+                <h1 data-i18n="hero.title">Commercial Video & Advertising Photography</h1>
+                <p class="hero-copy" data-i18n="hero.copy">Professional visual production for brands, events, stores and destination portraits across the UAE and Guangzhou.</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Discuss a Project</a>
-                    <a href="gallery.html" class="btn btn-ghost">View Portfolio</a>
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.primary">Get a Quote</a>
+                    <a href="gallery.html" class="btn btn-ghost" data-i18n="hero.secondary">View Portfolio</a>
                 </div>
                 <div class="hero-proof">
-                    <span>Brand Video</span>
-                    <span>Event Coverage</span>
-                    <span>Product / Store</span>
-                    <span>Portrait Campaign</span>
+                    <span class="glass-card draggable-card" data-i18n="hero.proof1">Brand Video</span>
+                    <span class="glass-card draggable-card" data-i18n="hero.proof2">Event Coverage</span>
+                    <span class="glass-card draggable-card" data-i18n="hero.proof3">Product / Store</span>
+                    <span class="glass-card draggable-card" data-i18n="hero.proof4">Portrait Campaign</span>
                 </div>
+                <aside class="hero-glass-card glass-card draggable-card" aria-label="Commercial service summary">
+                    <p data-i18n="hero.cardEyebrow">Commercial Visuals</p>
+                    <h2 data-i18n="hero.cardTitle">UAE / Guangzhou</h2>
+                    <div class="glass-stats">
+                        <span><strong data-i18n="hero.stat1Title">Video</strong> <em data-i18n="hero.stat1Text">Ads & reels</em></span>
+                        <span><strong data-i18n="hero.stat2Title">Photo</strong> <em data-i18n="hero.stat2Text">Campaigns</em></span>
+                        <span><strong data-i18n="hero.stat3Title">Event</strong> <em data-i18n="hero.stat3Text">Coverage</em></span>
+                    </div>
+                    <small data-i18n="hero.cardNote">Chinese / English inquiries welcome</small>
+                </aside>
             </div>
         </section>
 
         <section class="service-band" id="services">
-            <div class="container">
+            <div class="container glass-card draggable-card">
                 <div class="section-heading">
-                    <p class="eyebrow">Services</p>
-                    <h2>面向品牌增长的商业影像服务</h2>
-                    <p>清晰服务中国与海外客户：广告内容、品牌短片、活动记录、门店展示、产品素材与高端肖像。</p>
+                    <p class="eyebrow" data-i18n="services.eyebrow">Services</p>
+                    <h2 data-i18n="services.title">Commercial visuals built for brand growth</h2>
+                    <p data-i18n="services.copy">Video and photography for advertising, social media, websites, launches, exhibitions, stores and premium portraits.</p>
                 </div>
                 <div class="service-grid">
-                    <article class="service-card">
-                        <img src="images/guangzhou/promotional/cover.jpg" alt="商业录像案例">
+                    <article class="service-card glass-card draggable-card">
+                        <img src="images/guangzhou/promotional/cover.jpg" alt="Commercial video production" loading="lazy">
                         <div>
                             <span>01</span>
-                            <h3>Commercial Video Production</h3>
-                            <p>品牌宣传片、广告短片、门店介绍、产品视频与活动花絮，适合 Instagram、TikTok、小红书、官网和广告投放。</p>
-                            <a href="gallery.html?tag=视频">View video work</a>
+                            <h3 data-i18n="services.videoTitle">Commercial Video Production</h3>
+                            <p data-i18n="services.videoText">Brand films, ads, store introductions, product videos and event reels for Instagram, TikTok, websites and paid campaigns.</p>
+                            <a href="gallery.html?tag=视频" data-i18n="services.videoLink">View video work</a>
                         </div>
                     </article>
-                    <article class="service-card">
-                        <img src="images/abu-dhabi/exhibition/cover.jpg" alt="活动与展会拍摄案例">
+                    <article class="service-card glass-card draggable-card">
+                        <img src="images/abu-dhabi/exhibition/cover.jpg" alt="Event and exhibition coverage" loading="lazy">
                         <div>
                             <span>02</span>
-                            <h3>Event & Exhibition Coverage</h3>
-                            <p>服务阿联酋和广州展会、发布会、企业活动、门店开业与品牌活动，输出可用于 PR、社媒和客户汇报的照片与视频。</p>
-                            <a href="gallery.html?tag=活动">View event work</a>
+                            <h3 data-i18n="services.eventTitle">Event & Exhibition Coverage</h3>
+                            <p data-i18n="services.eventText">Coverage for UAE and Guangzhou exhibitions, launches, corporate events, store openings and brand activations.</p>
+                            <a href="gallery.html?tag=活动" data-i18n="services.eventLink">View event work</a>
                         </div>
                     </article>
-                    <article class="service-card">
-                        <img src="images/guangzhou/product/cover.jpg" alt="产品和门店拍摄案例">
+                    <article class="service-card glass-card draggable-card">
+                        <img src="images/guangzhou/product/cover.jpg" alt="Advertising photography" loading="lazy">
                         <div>
                             <span>03</span>
-                            <h3>Advertising Photography</h3>
-                            <p>产品、门店、酒店、餐饮、空间、团队形象和个人品牌肖像，制作适合广告、菜单、官网和社媒的视觉资产。</p>
-                            <a href="gallery.html?tag=商业">View commercial work</a>
+                            <h3 data-i18n="services.photoTitle">Advertising Photography</h3>
+                            <p data-i18n="services.photoText">Product, store, hotel, restaurant, space, team and personal brand photography for ads, menus, websites and social media.</p>
+                            <a href="gallery.html?tag=商业" data-i18n="services.photoLink">View commercial work</a>
                         </div>
                     </article>
                 </div>
@@ -91,97 +115,158 @@
         </section>
 
         <section class="market-band">
-            <div class="container market-layout">
+            <div class="container market-layout glass-card draggable-card">
                 <div>
-                    <p class="eyebrow">Markets</p>
-                    <h2>服务阿联酋与广州，也服务国际客户</h2>
-                    <p>From UAE business campaigns to Guangzhou brand content, Leo works with Chinese and international clients who need clean, professional and conversion-ready visuals.</p>
+                    <p class="eyebrow" data-i18n="markets.eyebrow">Markets</p>
+                    <h2 data-i18n="markets.title">UAE and Guangzhou service for international clients</h2>
+                    <p data-i18n="markets.copy">Leo works with Chinese brands, overseas founders, local businesses and international teams that need professional content ready for commercial use.</p>
                 </div>
                 <div class="market-grid">
-                    <div>
+                    <div class="glass-card draggable-card">
                         <span>UAE</span>
                         <h3>Abu Dhabi / Dubai</h3>
-                        <p>Exhibitions, hospitality, destination campaigns, tourism portraits, luxury spaces and social media content.</p>
+                        <p data-i18n="markets.uae">Exhibitions, hospitality, destination campaigns, tourism portraits, luxury spaces and social media content.</p>
                     </div>
-                    <div>
-                        <span>China</span>
-                        <h3>Guangzhou</h3>
-                        <p>Brand videos, product launches, store content, corporate events, commercial portraits and advertising assets.</p>
+                    <div class="glass-card draggable-card">
+                        <span data-i18n="markets.chinaLabel">China</span>
+                        <h3 data-i18n="markets.gzTitle">Guangzhou</h3>
+                        <p data-i18n="markets.gz">Brand videos, product launches, store content, corporate events, commercial portraits and advertising assets.</p>
                     </div>
-                    <div>
-                        <span>Bilingual</span>
-                        <h3>中文 / English</h3>
-                        <p>Clear communication for Chinese brands, overseas founders, local businesses and international teams.</p>
+                    <div class="glass-card draggable-card">
+                        <span data-i18n="markets.langLabel">Bilingual</span>
+                        <h3 data-i18n="markets.langTitle">Chinese / English</h3>
+                        <p data-i18n="markets.lang">Clear communication for Chinese clients, UAE local businesses and international production teams.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="featured-work">
-            <div class="container">
+            <div class="container glass-card draggable-card">
                 <div class="section-heading split">
                     <div>
-                        <p class="eyebrow">Selected Work</p>
-                        <h2>Commercial Portfolio</h2>
+                        <p class="eyebrow" data-i18n="work.eyebrow">Selected Work</p>
+                        <h2 data-i18n="work.title">Commercial case studies</h2>
                     </div>
-                    <a href="gallery.html" class="text-link">View all</a>
+                    <a href="gallery.html" class="text-link" data-i18n="work.viewAll">View all</a>
                 </div>
                 <div class="portfolio-grid" id="featured-albums"></div>
             </div>
         </section>
 
+        <section class="trust-band">
+            <div class="container trust-layout glass-card draggable-card">
+                <div>
+                    <p class="eyebrow" data-i18n="trust.eyebrow">Proof</p>
+                    <h2 data-i18n="trust.title">Built for commercial delivery</h2>
+                </div>
+                <div class="trust-grid">
+                    <div class="glass-card draggable-card">
+                        <strong data-i18n="trust.item1Title">Commercial usage</strong>
+                        <p data-i18n="trust.item1Text">Images and videos prepared for ads, websites, PR, menus, social media and client presentations.</p>
+                    </div>
+                    <div class="glass-card draggable-card">
+                        <strong data-i18n="trust.item2Title">Bilingual communication</strong>
+                        <p data-i18n="trust.item2Text">Chinese and English project communication for cross-border teams and UAE local clients.</p>
+                    </div>
+                    <div class="glass-card draggable-card">
+                        <strong data-i18n="trust.item3Title">Fast social delivery</strong>
+                        <p data-i18n="trust.item3Text">Deliverables can be planned for launch windows, event recaps and short-form content calendars.</p>
+                    </div>
+                    <div class="glass-card draggable-card">
+                        <strong data-i18n="trust.item4Title">UAE + Guangzhou</strong>
+                        <p data-i18n="trust.item4Text">Flexible production for Abu Dhabi, Dubai, Guangzhou and nearby commercial locations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="process-band">
-            <div class="container process-layout">
+            <div class="container process-layout glass-card draggable-card">
                 <div class="section-heading">
-                    <p class="eyebrow">Workflow</p>
-                    <h2>专业项目流程，减少沟通成本</h2>
+                    <p class="eyebrow" data-i18n="workflow.eyebrow">Workflow</p>
+                    <h2 data-i18n="workflow.title">A clear process for business projects</h2>
                 </div>
                 <div class="process-list">
-                    <div>
+                    <div class="glass-card draggable-card">
                         <span>01</span>
-                        <h3>Brief & Objective</h3>
-                        <p>确认品牌目标、目标平台、拍摄地点、参考风格、语言需求和交付格式。</p>
+                        <h3 data-i18n="workflow.step1Title">Brief & Objective</h3>
+                        <p data-i18n="workflow.step1Text">Confirm business goal, target platform, location, visual reference, language needs and delivery format.</p>
                     </div>
-                    <div>
+                    <div class="glass-card draggable-card">
                         <span>02</span>
-                        <h3>Shot Plan</h3>
-                        <p>根据广告用途、活动流程或旅拍路线，规划镜头、场景、时间和关键画面。</p>
+                        <h3 data-i18n="workflow.step2Title">Shot Plan</h3>
+                        <p data-i18n="workflow.step2Text">Plan scenes, schedule, route and key frames based on advertising use, event flow or portrait concept.</p>
                     </div>
-                    <div>
+                    <div class="glass-card draggable-card">
                         <span>03</span>
-                        <h3>Production & Delivery</h3>
-                        <p>完成拍摄、筛选、调色、剪辑与精修，交付可直接用于广告、官网和社媒发布的素材。</p>
+                        <h3 data-i18n="workflow.step3Title">Production & Delivery</h3>
+                        <p data-i18n="workflow.step3Text">Shoot, select, color grade, edit and retouch assets ready for ads, websites and social media.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="about" class="about-marketing">
-            <div class="container about-layout">
+            <div class="container about-layout glass-card draggable-card">
                 <div>
-                    <p class="eyebrow">About Leo</p>
-                    <h2>专业商业视角，也保留真实人物质感</h2>
+                    <p class="eyebrow" data-i18n="about.eyebrow">About Leo</p>
+                    <h2 data-i18n="about.title">Commercial perspective with real human texture</h2>
                 </div>
                 <div>
-                    <p class="about-lead">Leo provides commercial video and photography services across the UAE and Guangzhou, with a focus on brand image, advertising content, events, stores, products and destination portraits.</p>
-                    <p id="photographer-bio">加载中...</p>
+                    <p class="about-lead" data-i18n="about.lead">Leo provides commercial video and photography services across the UAE and Guangzhou, focused on brand image, advertising content, events, stores, products and destination portraits.</p>
+                    <p id="photographer-bio" data-i18n="about.bio">Projects are planned around business use: where the assets will be published, what the audience needs to understand and how the final visuals support conversion.</p>
                     <div class="contact-info" id="contact-info"></div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact-cta">
-            <div class="container contact-layout">
-                <div>
-                    <p class="eyebrow">Booking</p>
-                    <h2>Tell me about your campaign, event or brand story</h2>
-                    <p>请发送城市、项目类型、拍摄日期、使用平台、期望成片时长或照片数量。English inquiries are welcome.</p>
+        <section class="faq-band">
+            <div class="container faq-layout glass-card draggable-card">
+                <div class="section-heading">
+                    <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+                    <h2 data-i18n="faq.title">Before you request a quote</h2>
                 </div>
-                <div class="contact-panel">
-                    <a class="contact-button" href="mailto:13005442629@163.com?subject=Commercial video / photography inquiry">Email for quotation</a>
-                    <a class="contact-button" href="gallery.html">View portfolio first</a>
-                    <p>微信：<strong>LI920520414</strong></p>
-                    <p>小红书：<strong>阿布扎比摄影师-Leo</strong></p>
+                <div class="faq-grid">
+                    <article class="glass-card draggable-card">
+                        <h3 data-i18n="faq.q1">Do you shoot in Dubai and Abu Dhabi?</h3>
+                        <p data-i18n="faq.a1">Yes. Projects can be arranged in Abu Dhabi, Dubai, Guangzhou and nearby commercial locations.</p>
+                    </article>
+                    <article class="glass-card draggable-card">
+                        <h3 data-i18n="faq.q2">Can you communicate in English?</h3>
+                        <p data-i18n="faq.a2">Yes. Chinese and English inquiries are supported for briefs, shot plans and delivery notes.</p>
+                    </article>
+                    <article class="glass-card draggable-card">
+                        <h3 data-i18n="faq.q3">Can you deliver short videos?</h3>
+                        <p data-i18n="faq.a3">Yes. Short reels, brand clips, store introductions, event recaps and social-first edits can be planned.</p>
+                    </article>
+                    <article class="glass-card draggable-card">
+                        <h3 data-i18n="faq.q4">What affects the price?</h3>
+                        <p data-i18n="faq.a4">Location, shoot time, crew needs, number of deliverables, editing depth, usage and delivery timeline.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-cta">
+            <div class="container contact-layout glass-card draggable-card">
+                <div>
+                    <p class="eyebrow" data-i18n="contact.eyebrow">Booking</p>
+                    <h2 data-i18n="contact.title">Tell me about your campaign, event or brand story</h2>
+                    <p data-i18n="contact.copy">Please include the city, project type, shooting date, target platform, expected deliverables and budget range.</p>
+                    <ul class="quote-list">
+                        <li data-i18n="contact.item1">City and shooting date</li>
+                        <li data-i18n="contact.item2">Project type and usage platform</li>
+                        <li data-i18n="contact.item3">Expected video length or photo quantity</li>
+                        <li data-i18n="contact.item4">Budget range and delivery deadline</li>
+                    </ul>
+                </div>
+                <div class="contact-panel glass-card draggable-card">
+                    <a class="contact-button" href="https://wa.me/8613005442629" target="_blank" rel="noopener" data-track-contact="whatsapp" data-i18n="contact.whatsapp">WhatsApp for quotation</a>
+                    <a class="contact-button" href="mailto:13005442629@163.com?subject=Commercial video / photography inquiry" data-track-contact="email" data-i18n="contact.email">Email for quotation</a>
+                    <a class="contact-button" href="gallery.html" data-i18n="contact.portfolio">View portfolio first</a>
+                    <p data-i18n="contact.wechat">WeChat: <strong>LI920520414</strong></p>
+                    <p data-i18n="contact.xhs">Xiaohongshu: <strong>阿布扎比摄影师-Leo</strong></p>
                 </div>
             </div>
         </section>
@@ -189,10 +274,13 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Leo Photography. Commercial Video & Portrait Photography.</p>
+            <p data-i18n="footer.copy">&copy; 2026 Leo Photography. Commercial Video & Portrait Photography.</p>
         </div>
     </footer>
 
+    <script src="js/glass-bg.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/glass-cards.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
