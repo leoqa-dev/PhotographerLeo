@@ -26,9 +26,9 @@
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
-                <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
                 <li><a href="gallery.html" data-i18n="nav.portfolio">Portfolio</a></li>
-                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="video.html" data-i18n="menu.video">Video</a></li>
                 <li>
                     <div class="language-switch" aria-label="Language switch">
                         <button type="button" class="lang-option" data-lang="zh" onclick="window.LeoI18n && window.LeoI18n.setLanguage('zh')">CN</button>
@@ -36,7 +36,7 @@
                         <button type="button" class="lang-option" data-lang="en" onclick="window.LeoI18n && window.LeoI18n.setLanguage('en')">EN</button>
                     </div>
                 </li>
-                <li><a href="#contact" class="nav-cta" data-i18n="nav.cta">Get a Quote</a></li>
+                <li><a href="https://wa.me/8613005442629" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav.cta">Get a Quote</a></li>
             </ul>
         </nav>
     </header>
@@ -46,14 +46,13 @@
     <main>
         <section class="marketing-hero" id="top">
             <div class="hero-media" id="hero-media"></div>
-            <div class="liquid-field" aria-hidden="true"></div>
             <div class="hero-shade"></div>
             <div class="hero-inner">
                 <p class="eyebrow" data-i18n="hero.eyebrow">UAE · Guangzhou · Commercial Visuals</p>
-                <h1 data-i18n="hero.title">Commercial Video & Advertising Photography</h1>
+                <h1 data-i18n="hero.title">Abu Dhabi Photographer / Videographer</h1>
                 <p class="hero-copy" data-i18n="hero.copy">Professional visual production for brands, events, stores and destination portraits across the UAE and Guangzhou.</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary" data-i18n="hero.primary">Get a Quote</a>
+                    <a href="https://wa.me/8613005442629" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="hero.primary">Get a Quote</a>
                     <a href="gallery.html" class="btn btn-ghost" data-i18n="hero.secondary">View Portfolio</a>
                 </div>
                 <div class="hero-proof">
@@ -62,15 +61,18 @@
                     <span class="glass-card draggable-card" data-i18n="hero.proof3">Product / Store</span>
                     <span class="glass-card draggable-card" data-i18n="hero.proof4">Portrait Campaign</span>
                 </div>
-                <aside class="hero-glass-card glass-card draggable-card" aria-label="Commercial service summary">
-                    <p data-i18n="hero.cardEyebrow">Commercial Visuals</p>
-                    <h2 data-i18n="hero.cardTitle">UAE / Guangzhou</h2>
-                    <div class="glass-stats">
-                        <span><strong data-i18n="hero.stat1Title">Video</strong> <em data-i18n="hero.stat1Text">Ads & reels</em></span>
-                        <span><strong data-i18n="hero.stat2Title">Photo</strong> <em data-i18n="hero.stat2Text">Campaigns</em></span>
-                        <span><strong data-i18n="hero.stat3Title">Event</strong> <em data-i18n="hero.stat3Text">Coverage</em></span>
+                <aside class="hero-glass-card hero-contact-card glass-card draggable-card" aria-label="Contact Leo">
+                    <p data-i18n="contact.eyebrow">Booking</p>
+                    <h2 data-i18n="contact.shortTitle">Contact Leo</h2>
+                    <div class="hero-contact-actions">
+                        <a class="contact-button" href="https://wa.me/8613005442629" target="_blank" rel="noopener" data-track-contact="whatsapp" data-i18n="contact.whatsapp">WhatsApp for quotation</a>
+                        <a class="contact-button" href="mailto:13005442629@163.com?subject=Commercial video / photography inquiry" data-track-contact="email" data-i18n="contact.email">Email for quotation</a>
+                        <a class="contact-button" href="gallery.html" data-i18n="contact.portfolio">View portfolio first</a>
                     </div>
-                    <small data-i18n="hero.cardNote">Chinese / English inquiries welcome</small>
+                    <div class="hero-contact-lines">
+                        <p data-i18n="contact.wechat">WeChat: <strong>LI920520414</strong></p>
+                        <p data-i18n="contact.xhs">Xiaohongshu: <strong>阿布扎比摄影师-Leo</strong></p>
+                    </div>
                 </aside>
             </div>
         </section>
@@ -279,7 +281,7 @@
     </footer>
 
     <script src="js/glass-bg.js"></script>
-    <script src="js/i18n.js"></script>
+    <script src="js/i18n.js?v=20260706"></script>
     <script src="js/glass-cards.js"></script>
     <script src="js/main.js"></script>
 </body>

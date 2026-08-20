@@ -1835,6 +1835,7 @@ body {
     z-index: 1;
     pointer-events: none;
     overflow: hidden;
+    display: none;
 }
 
 .liquid-field::before,
@@ -2878,5 +2879,781 @@ body {
     .hero-proof span {
         flex: 1 1 auto;
         text-align: center;
+    }
+}
+
+/* Desktop compact overview: keep the full homepage visible in one screen. */
+@media (min-width: 1100px) {
+    body.home-page {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    html {
+        overflow-y: auto;
+    }
+
+    .home-page {
+        font-size: 13px;
+        overflow-x: hidden;
+    }
+
+    .home-page .header {
+        position: fixed;
+    }
+
+    .nav {
+        max-width: none;
+        min-height: 54px;
+        padding: 0 18px;
+    }
+
+    .logo span {
+        font-size: 1.05rem;
+    }
+
+    .logo small {
+        font-size: 0.58rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.8rem;
+    }
+
+    .nav-cta,
+    .language-switch {
+        padding: 0.36rem 0.55rem;
+    }
+
+    .reset-layout-btn {
+        right: 12px;
+        bottom: 10px;
+        z-index: 20;
+        padding: 0.45rem 0.62rem;
+        font-size: 0.72rem;
+    }
+
+    .home-page main {
+        height: 100vh;
+        max-height: 100vh;
+        min-height: 0;
+        padding: 66px 12px 12px;
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-rows: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    .marketing-hero,
+    .service-band,
+    .market-band,
+    .featured-work,
+    .trust-band,
+    .process-band,
+    .about-marketing,
+    .faq-band,
+    .contact-cta {
+        min-height: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .home-page main > section {
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .marketing-hero {
+        grid-column: 1 / 5;
+        grid-row: 1 / 3;
+        border-radius: 24px;
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--glass-shadow);
+    }
+
+    .service-band {
+        grid-column: 5 / 9;
+        grid-row: 1 / 3;
+    }
+
+    .featured-work {
+        grid-column: 9 / 13;
+        grid-row: 1 / 3;
+    }
+
+    .market-band {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+
+    .trust-band {
+        grid-column: 4 / 7;
+        grid-row: 3 / 4;
+    }
+
+    .process-band {
+        grid-column: 7 / 10;
+        grid-row: 3 / 4;
+    }
+
+    .contact-cta {
+        grid-column: 10 / 13;
+        grid-row: 3 / 5;
+    }
+
+    .about-marketing {
+        grid-column: 1 / 7;
+        grid-row: 4 / 5;
+    }
+
+    .faq-band {
+        grid-column: 7 / 10;
+        grid-row: 4 / 5;
+    }
+
+    .home-page .service-band .container,
+    .home-page .market-layout,
+    .home-page .featured-work .container,
+    .home-page .trust-layout,
+    .home-page .process-layout,
+    .home-page .about-layout,
+    .home-page .faq-layout,
+    .home-page .contact-layout {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        min-height: 0;
+        border-radius: 20px;
+        padding: 0.75rem;
+        overflow: hidden;
+    }
+
+    .hero-inner {
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .hero-inner h1 {
+        max-width: 100%;
+        font-size: clamp(2.35rem, 3.4vw, 3.5rem);
+        line-height: 0.92;
+        margin-bottom: 0.55rem;
+    }
+
+    .hero-copy {
+        max-width: 90%;
+        font-size: 0.82rem;
+        line-height: 1.45;
+    }
+
+    .hero-actions {
+        gap: 0.5rem;
+        margin-top: 0.8rem;
+    }
+
+    .btn {
+        padding: 0.55rem 0.72rem;
+        font-size: 0.78rem;
+    }
+
+    .hero-proof {
+        gap: 0.42rem;
+        margin-top: 0.7rem;
+    }
+
+    .hero-proof span {
+        padding: 0.36rem 0.52rem;
+        font-size: 0.72rem;
+    }
+
+    .hero-glass-card {
+        position: static;
+        width: min(100%, 360px);
+        margin-top: 0.7rem;
+        padding: 0.75rem;
+        border-radius: 18px;
+    }
+
+    .hero-glass-card h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.55rem;
+    }
+
+    .hero-glass-card p,
+    .eyebrow {
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+        margin-bottom: 0.45rem;
+    }
+
+    .glass-stats {
+        gap: 0.35rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .glass-stats span {
+        min-height: 42px;
+        padding: 0.4rem 0.32rem;
+        border-radius: 10px;
+        font-size: 0.68rem;
+    }
+
+    .glass-stats strong {
+        font-size: 0.72rem;
+    }
+
+    .hero-glass-card small {
+        font-size: 0.68rem;
+    }
+
+    .liquid-field::before {
+        width: 34vw;
+        height: 42vh;
+    }
+
+    .liquid-field::after {
+        width: 28vw;
+        height: 38vh;
+    }
+
+    .section-heading {
+        max-width: none;
+        margin-bottom: 0.55rem;
+    }
+
+    .section-heading.split {
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .section-heading h2,
+    .market-layout h2,
+    .about-layout h2,
+    .contact-layout h2 {
+        font-size: clamp(1.05rem, 1.35vw, 1.45rem);
+        line-height: 1.02;
+        margin-bottom: 0.35rem;
+    }
+
+    .section-heading p:not(.eyebrow),
+    .market-layout p,
+    .contact-layout p,
+    .about-layout p,
+    .process-list p,
+    .service-card p,
+    .trust-grid p,
+    .faq-grid p {
+        font-size: 0.72rem;
+        line-height: 1.35;
+        margin-bottom: 0;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
+    .service-card,
+    .service-card:first-child,
+    .service-card:nth-child(2),
+    .service-card:nth-child(3) {
+        grid-column: auto;
+        grid-row: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 64px 1fr;
+        border-radius: 16px;
+    }
+
+    .service-card div {
+        padding: 0.6rem;
+    }
+
+    .service-card h3,
+    .process-list h3 {
+        font-size: 0.82rem;
+        line-height: 1.08;
+        margin: 0.28rem 0 0.35rem;
+    }
+
+    .service-card a,
+    .text-link {
+        margin-top: 0.38rem;
+        font-size: 0.72rem;
+    }
+
+    .market-layout,
+    .trust-layout,
+    .process-layout,
+    .about-layout,
+    .faq-layout,
+    .contact-layout {
+        display: grid;
+        gap: 0.55rem;
+        grid-template-columns: 1fr;
+    }
+
+    .market-grid,
+    .trust-grid,
+    .faq-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.45rem;
+    }
+
+    .trust-grid,
+    .faq-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .market-grid > div,
+    .trust-grid > div,
+    .faq-grid > article,
+    .process-list > div {
+        min-height: 0;
+        border-radius: 14px;
+        padding: 0.45rem;
+    }
+
+    .market-grid span,
+    .service-card span,
+    .process-list span {
+        font-size: 0.6rem;
+    }
+
+    .market-grid h3,
+    .faq-grid h3,
+    .trust-grid strong {
+        font-size: 0.62rem;
+        line-height: 1.08;
+        margin: 0.18rem 0;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 0.45rem;
+    }
+
+    .portfolio-card,
+    .portfolio-card:nth-child(1),
+    .portfolio-card:nth-child(2),
+    .portfolio-card:nth-child(n+3) {
+        grid-column: auto;
+        border-radius: 14px;
+    }
+
+    .portfolio-image,
+    .portfolio-card:nth-child(1) .portfolio-image,
+    .portfolio-card:nth-child(2) .portfolio-image {
+        aspect-ratio: 1 / 0.72;
+    }
+
+    .portfolio-info {
+        padding: 0.48rem;
+    }
+
+    .portfolio-info p {
+        font-size: 0.62rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .portfolio-info h3 {
+        font-size: 0.72rem;
+        line-height: 1.08;
+        margin-bottom: 0.28rem;
+    }
+
+    .portfolio-info span {
+        font-size: 0.58rem;
+        padding: 0.1rem 0.28rem;
+        margin: 0 0.16rem 0.16rem 0;
+    }
+
+    .process-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.45rem;
+    }
+
+    .contact-panel {
+        gap: 0.42rem;
+        padding: 0.5rem;
+        border-radius: 16px;
+    }
+
+    .contact-button {
+        padding: 0.42rem 0.48rem;
+        font-size: 0.68rem;
+    }
+
+    .quote-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.28rem;
+        margin-top: 0.38rem;
+    }
+
+    .quote-list li,
+    .contact-item {
+        padding: 0.3rem 0.42rem;
+        font-size: 0.64rem;
+    }
+
+    .contact-info {
+        gap: 0.28rem;
+        margin-top: 0.4rem;
+    }
+
+    .contact-panel p {
+        font-size: 0.64rem;
+        line-height: 1.2;
+    }
+
+    .about-lead {
+        font-size: 0.72rem !important;
+    }
+
+    .home-page .footer {
+        display: none;
+    }
+
+    .service-card p,
+    .market-grid p,
+    .portfolio-info h3,
+    .trust-grid p,
+    .process-list p,
+    .about-layout p,
+    .faq-grid p,
+    .contact-layout p,
+    .quote-list li {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+    }
+
+    .about-layout p,
+    .contact-layout p {
+        -webkit-line-clamp: 2;
+    }
+}
+
+/* Cover-first homepage: keep details in the navigation/menu, not on the landing screen. */
+.home-page .service-band,
+.home-page .market-band,
+.home-page .featured-work,
+.home-page .trust-band,
+.home-page .process-band,
+.home-page .about-marketing,
+.home-page .faq-band,
+.home-page .contact-cta,
+.home-page .reset-layout-btn {
+    display: none;
+}
+
+.home-page .footer {
+    display: none;
+}
+
+.home-page main {
+    display: block;
+    height: auto;
+    min-height: 100vh;
+    padding: 0;
+    overflow: visible;
+}
+
+.home-page .marketing-hero {
+    min-height: 100vh;
+    border-radius: 0;
+    border: 0;
+}
+
+.home-page .hero-inner {
+    width: min(1180px, calc(100% - 40px));
+    min-height: 100vh;
+    padding: 18vh 0 8vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.58fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: end;
+}
+
+.home-page .hero-inner > .eyebrow,
+.home-page .hero-inner > h1,
+.home-page .hero-copy,
+.home-page .hero-actions,
+.home-page .hero-proof {
+    grid-column: 1;
+}
+
+.home-page .hero-inner h1 {
+    max-width: 820px;
+    font-size: clamp(4.1rem, 8.4vw, 8rem);
+    font-family: "Brush Script MT", "Snell Roundhand", "Segoe Script", "Kaiti SC", "STKaiti", cursive;
+    letter-spacing: 0;
+    line-height: 1.02;
+}
+
+.home-page .hero-copy {
+    max-width: 660px;
+}
+
+.home-page .hero-proof {
+    margin-top: 1.6rem;
+}
+
+.home-page .hero-contact-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    align-self: end;
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    padding: 1.35rem;
+}
+
+.hero-contact-actions {
+    display: grid;
+    gap: 0.72rem;
+    margin: 1rem 0;
+}
+
+.hero-contact-lines {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.hero-contact-lines p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+
+.hero-contact-lines strong {
+    color: var(--white);
+}
+
+@media (max-width: 1099px) {
+    .home-page .hero-inner {
+        min-height: 100vh;
+        padding: 18vh 0 8vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .home-page .hero-contact-card {
+        position: relative;
+        width: min(100%, 420px);
+        margin-top: 1.5rem;
+        right: auto;
+        bottom: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-page .marketing-hero {
+        min-height: 100vh;
+    }
+
+    .home-page .hero-inner {
+        width: min(100% - 30px, 680px);
+        padding: 16vh 0 6vh;
+    }
+
+    .home-page .hero-inner h1 {
+        font-size: clamp(2.75rem, 14vw, 4.5rem);
+    }
+
+    .home-page .hero-proof {
+        display: none;
+    }
+}
+
+@media (min-width: 1100px) {
+    .home-page .marketing-hero {
+        height: 100vh;
+        max-height: 100vh;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .home-page .hero-inner {
+        height: 100vh;
+        min-height: 0;
+        padding: 13vh 0 6vh;
+    }
+
+    .home-page .hero-inner h1 {
+        font-size: clamp(3.6rem, 7.2vw, 6.8rem);
+    }
+
+    .home-page .hero-proof {
+        margin-top: 1rem;
+    }
+
+    .home-page .hero-contact-card {
+        max-width: 390px;
+        padding: 1.15rem;
+    }
+}
+
+.service-detail-main,
+.video-main {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 110px 20px 64px;
+}
+
+.service-detail-shell,
+.video-shell {
+    color: var(--white);
+    border-radius: 30px;
+    padding: clamp(1.4rem, 3vw, 2.4rem);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.service-detail-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.55fr);
+    gap: 1.2rem;
+    align-items: end;
+}
+
+.service-detail-shell h1,
+.video-shell h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5vw, 5rem);
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.service-detail-shell p,
+.video-shell p {
+    max-width: 760px;
+    color: rgba(255, 255, 255, 0.74);
+    line-height: 1.75;
+}
+
+.service-price-card {
+    display: grid;
+    gap: 0.65rem;
+    padding: 1.2rem;
+    border-radius: 24px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)),
+        rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.48);
+}
+
+.service-price-card span,
+.service-detail-card span {
+    color: var(--gold);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.service-price-card strong {
+    color: var(--white);
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+}
+
+.service-detail-section {
+    padding-top: 1.2rem;
+}
+
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.service-detail-card {
+    min-height: 220px;
+    padding: 1.35rem;
+    border-radius: 24px;
+    color: var(--white);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.035)),
+        rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.service-detail-card h2 {
+    margin: 0.75rem 0;
+    font-size: 1.35rem;
+}
+
+.service-detail-card p {
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.75;
+}
+
+.video-stage {
+    min-height: calc(100vh - 174px);
+    display: grid;
+    align-items: center;
+}
+
+.video-shell {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.video-placeholder {
+    min-height: 48vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    background:
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.18), transparent 44%),
+        rgba(255, 255, 255, 0.055);
+}
+
+.video-placeholder span {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: clamp(4rem, 13vw, 12rem);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 0.8;
+}
+
+.video-placeholder p {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 0 1rem 2rem;
+}
+
+@media (max-width: 900px) {
+    .service-detail-shell,
+    .service-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail-card {
+        min-height: 0;
     }
 }
